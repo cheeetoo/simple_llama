@@ -63,7 +63,7 @@ def gpt(x: jax.Array, params: Params, eps: float, theta: int):
 
 
 if __name__ == "__main__":
-    nv = 50257;d = 384;ctx_len = 1024;nb = 6;nh = 6;ng = 2  # noqa: E702
+    nv = 50257;d = 384;nb = 6;nh = 6;ng = 2  # noqa: E702
     eps = 1e-5;theta = 10_000  # noqa: E702
     keys = jax.random.split(jax.random.PRNGKey(0), 8)
     init = jax.nn.initializers.xavier_normal()
